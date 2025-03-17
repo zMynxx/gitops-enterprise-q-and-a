@@ -24,10 +24,10 @@
 
 ## If you want to define extra Helm values inside an Argo CD application manifest ideally you should use:
 
-- **✔️ The "helm.parameters" property**
+- The "helm.parameters" property
 - The "helm.values" property
 - The "helm.valuesObject" property
-- The "helm.valueFiles" property
+- **✔️ The "helm.valueFiles" property**
 
 ## What is the proper way to group multiple applications together in a large Argo CD instance?
 
@@ -58,8 +58,8 @@
 ## Argo CD supports a "kustomize" property inside an Application CRD. Is it a good practice to use it?
 
 - Yes because it bundles everything an application needs in a single file
-- **✔️ Yes because you can add your own kustomize overrides inside an Argo CD application**
-- No because you are mixing different types of manifests in the same application, forcing developers to need Argo CD even for local deployments
+- Yes because you can add your own kustomize overrides inside an Argo CD application
+- **✔️ No because you are mixing different types of manifests in the same application, forcing developers to need Argo CD even for local deployments**
 - No because you shouldn't use Kustomize for Argo CD applications. Helm charts are the best recommendation for your own applications
 
 ## A developer wants to test locally a Helm application that is already deployed by Argo CD in the "Staging" environment. Ideally,
@@ -135,9 +135,9 @@
 ## What is the implicit requirement for using the cluster generator in an Application Set?
 
 - You are using the hub-and-spoke model so that your Argo CD instance has access to several clusters
-- **✔️ You have already placed labels in your clusters, so that the generator can pick the correct ones**
+- You have already placed labels in your clusters, so that the generator can pick the correct ones
 - Each cluster that belongs to the generator must have Argo CD installed in advance
-- You have removed all list generators from the application set as they cannot work together with cluster generators
+- **✔️ You have removed all list generators from the application set as they cannot work together with cluster generators**
 
 ## If you choose to store your Application Set in a Git repository
 
@@ -454,10 +454,10 @@
 
 ## What is the correct way of migrating an Application between 2 ArgoCD instances without downtime?
 
-- **✔️ Deploying the application to the second cluster, removing finalizers from the first instance only and removing it from the first instance**
+- Deploying the application to the second cluster, removing finalizers from the first instance only and removing it from the first instance
 - Removing finalizers from the first instance, deleting the application and then deploying it again on the second instance
 - Removing the application from the UI of the first instance using the orphan prune propagation
-- Any of the above procedures will have the same end result
+- **✔️ Any of the above procedures will have the same end result**
 
 ## Does Argo CD support multi tenant Kubernetes clusters?
 
@@ -620,10 +620,10 @@
 
 ## You can use the Kubernetes Downward API and Argo Rollouts Ephemeral labels together:
 
-- so that the application knows when a canary is active and can change its configuration accordingly
+- **✔️ so that the application knows when a canary is active and can change its configuration accordingly**
 - so that you can scale canary traffic proportional to the number of canary pods that are ready
 - so that Argo Rollouts automatically detects new versions of Stateful Sets.
-- **✔️ so that changes to configmaps trigger a new canary process**
+- so that changes to configmaps trigger a new canary process
 
 ## How can you instruct a canary application to stop using the production queue and send messages to a preview queue when a canary has started?
 
