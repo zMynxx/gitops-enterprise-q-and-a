@@ -48,7 +48,7 @@
 - **✔️ No because you are mixing different types of manifests in the same application, forcing developers to need Argo CD even for local deployments**
 - No because this information is not stored in Git and therefore doesn't follow the GitOps principles.
 
-## What is the main purpose of the "multi-sources" feature in Argo CD:
+## What is the main purpose of the "multi-sources" feature in Argo CD?
 
 - You should use "multi-sources" to group several microservices in a single Argo CD application
 - You should use "multi-sources" to group all infrastructure apps (certmanager, nginx) of a cluster in a single Argo CD application
@@ -174,7 +174,7 @@
 - Developers will need to run a special Cl pipeline for creating a new environment and another pipeline to shut it down
 - Developers will need to create a new namespace on a cluster to create a new environment and delete the namespace to discard it
 
-## What is the best way to create preview environments with Argo?
+## What is the best way to create preview environments with Argo ?
 
 - **✔️ Use the Pull Request Generator of Argo CD**
 - Use the Event Source of Argo Events
@@ -452,7 +452,7 @@
 - **✔️ This can be good or bad depending on the use case. It is best to ask the colleague what they want to do.**
 - This is bad because now the parent Application Set will be deleted as well
 
-## What is the correct way of migrating an Application between 2 ArgoCD instances without downtime?
+## What is the correct way of migrating an Application between 2 Argo CD instances without downtime?
 
 - Deploying the application to the second cluster, removing finalizers from the first instance only and removing it from the first instance
 - Removing finalizers from the first instance, deleting the application and then deploying it again on the second instance
@@ -683,8 +683,8 @@
 
 ## Having your application read the URLs of external services as a configuration parameter:
 
-- Is a good practice to employ as it allows easy testing on non-production environments (even when not using Argo Rollouts)
-- **✔️ is a bad practice because hardcoded URLs are much better for security purposes**
+- **✔️ Is a good practice to employ as it allows easy testing on non-production environments (even when not using Argo Rollouts)
+- is a bad practice because hardcoded URLs are much better for security purposes**
 - is a practice that goes against the Twelve-Factor App principles
 - is not possible anymore when your application runs in Kubernetes
 
