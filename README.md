@@ -134,10 +134,10 @@
 
 ## What is the implicit requirement for using the cluster generator in an Application Set?
 
-- You are using the hub-and-spoke model so that your Argo CD instance has access to several clusters
+- **✔️ You are using the hub-and-spoke model so that your Argo CD instance has access to several clusters**
 - You have already placed labels in your clusters, so that the generator can pick the correct ones
 - Each cluster that belongs to the generator must have Argo CD installed in advance
-- **✔️ You have removed all list generators from the application set as they cannot work together with cluster generators**
+- You have removed all list generators from the application set as they cannot work together with cluster generators
 
 ## If you choose to store your Application Set in a Git repository
 
