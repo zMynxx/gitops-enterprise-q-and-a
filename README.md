@@ -146,7 +146,7 @@
 - It has to be in the same Git repository as all other application sets managed by the same ArgoCD instance
 - **✔️ it can be a different Git repository than the one that contains the Kubernetes manifests**
 
-## Should you store all manifests from all applications from all clusters ln a single GitOps monorepo?
+## Should you store all manifests from all applications from all clusters in a single GitOps monorepo?
 
 - **✔️ It depends. Even though in some aspects it is easier to manage your Argo CD apps this way, you might have several performance bottlenecks.**
 - No. You should use one Git repository per Kubernetes cluster
